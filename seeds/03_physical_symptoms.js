@@ -1,18 +1,22 @@
 export async function seed(knex) {
-  // Deletes ALL existing entries
   await knex("physical_symptoms").del();
 
-  // Inserts seed entries
   const physicalSymptoms = [
     "cramps",
     "fatigue",
     "acne",
-    "body aches",
     "bloated",
     "headache",
     "nausea",
     "upset stomach",
     "poor sleep",
-    "dry mouth",
+    "hot flashes",
+    "dizziness",
+    "food cravings",
+    "lower back pain"
   ];
-};
+
+  return knex("physical_symptoms").insert(
+    physicalSymptoms.map(name => ({ name }))
+  );
+}

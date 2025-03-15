@@ -1,5 +1,4 @@
 export async function seed(knex) {
-  // Deletes ALL existing entries
   await knex("mental_conditions").del();
 
   const mentalConditions = [
@@ -11,7 +10,11 @@ export async function seed(knex) {
     "self-critical",
     "obsessive thoughts",
     "mood swings",
-    "content",
-    "happy",
+    "stressed",
+    "overwhelmed"
   ];
-};
+
+  return knex("mental_conditions").insert(
+    mentalConditions.map(name => ({ name }))
+  );
+}
