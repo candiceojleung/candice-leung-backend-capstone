@@ -1,4 +1,8 @@
-// Helper function to get full log data
+import initKnex from "knex";
+import configuration from "../knexfile.js";
+
+const knex = initKnex(configuration);
+
 const getFullLogData = async (logId) => {
     const log = await knex('period_logs').where({ id: logId }).first();
     

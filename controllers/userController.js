@@ -1,4 +1,7 @@
-import knex from '../db/knex.js';
+import initKnex from "knex";
+import configuration from "../knexfile.js";
+
+const knex = initKnex(configuration);
 
 export const createUser = async (req, res, next) => {
   try {
