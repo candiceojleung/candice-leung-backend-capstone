@@ -12,7 +12,7 @@ app.use(cors({ origin: CORS_ORIGIN }));
 app.use(express.json());
 
 // Basic Route
-app.use('/api/period-logs', periodLogRoutes);
+app.use('/api/log', periodLogRoutes);
 app.use('/api/users', userRoutes);
 
 // Server Listening
