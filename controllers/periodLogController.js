@@ -31,6 +31,19 @@ const getFullLogData = async (logId) => {
   };
 };
 
+const getAllPeriodLogs = async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const logs = await knex("period_logs").where({ user_id: userId });
+    
+    const fullLogs = await Promise.all(logs.map(log => getFullLogData(log.id)));
+    
+    res.json(fullLogs || []);
+  } catch (error) {
+    console.error("Error fetching all period logs:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+};
 const createPeriodLog = async (req, res) => {
   try {
     const { userId, date } = req.params;
@@ -78,6 +91,7 @@ const createPeriodLog = async (req, res) => {
   }
 };
 
+
 const getPeriodLogByDate = async (req, res) => {
   try {
     const { userId, date } = req.params;
@@ -86,7 +100,11 @@ const getPeriodLogByDate = async (req, res) => {
       .where({ user_id: userId, date })
       .first();
 
-    if (!log) return res.status(404).json({ error: "Log not found" });
+    if (!log) {
+      const allPhysicalSymptoms = await knex("physical_symptoms").select("*");
+      const allMentalConditions = await knex("mental_conditions").select("*");
+      return res.json({ allPhysicalSymptoms, allMentalConditions });
+    }
 
     res.json(await getFullLogData(log.id));
   } catch (error) {
@@ -174,7 +192,9 @@ const deletePeriodLog = async (req, res) => {
   }
 };
 
+
 export {
+  getAllPeriodLogs,
   createPeriodLog,
   getPeriodLogByDate,
   updatePeriodLog,
