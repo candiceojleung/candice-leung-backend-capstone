@@ -10,7 +10,7 @@ const getFullLogData = async (logId) => {
     .join(
       "period_log_physical_symptoms",
       "physical_symptoms.id",
-      "physical_symptom_id"
+      "physical_symptom_id" 
     )
     .where("period_log_id", logId)
     .select("physical_symptoms.name");
@@ -96,17 +96,32 @@ const getPeriodLogByDate = async (req, res) => {
   try {
     const { userId, date } = req.params;
 
+    // Fetch the period log for the given date
     const log = await knex("period_logs")
       .where({ user_id: userId, date })
       .first();
 
+    // Fetch all possible physical and mental symptoms
+    const allPhysicalSymptoms = await knex("physical_symptoms").select("*");
+    const allMentalConditions = await knex("mental_conditions").select("*");
+
     if (!log) {
-      const allPhysicalSymptoms = await knex("physical_symptoms").select("*");
-      const allMentalConditions = await knex("mental_conditions").select("*");
-      return res.json({ allPhysicalSymptoms, allMentalConditions });
+      // If no log exists, return all symptoms along with an empty log
+      return res.json({
+        log: null,
+        allPhysicalSymptoms,
+        allMentalConditions,
+      });
     }
 
-    res.json(await getFullLogData(log.id));
+    // If a log exists, fetch its associated symptoms
+    const fullLogData = await getFullLogData(log.id);
+
+    res.json({
+      log: fullLogData,
+      allPhysicalSymptoms,
+      allMentalConditions,
+    });
   } catch (error) {
     console.error("Error fetching period log:", error);
     res.status(500).json({ error: "Server error" });
