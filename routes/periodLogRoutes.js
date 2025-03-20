@@ -3,6 +3,8 @@ import * as periodLogController from "../controllers/periodLogController.js";
 
 const router = express.Router();
 
+router.route("/user/:userId").get(periodLogController.getAllPeriodLogs);
+
 router
   .route("/user/:userId/date/:date")
   .get(periodLogController.getPeriodLogByDate)
