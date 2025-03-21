@@ -5,11 +5,11 @@ export async function seed(knex) {
     "depressed",
     "irritable",
     "anxious",
-    "apathetic",
+    "apathy",
     "confused",
     "self-critical",
-    "obsessive thoughts",
-    "mood swings",
+    "spiraling",
+    "unstable moods",
     "stressed",
     "overwhelmed"
   ];
