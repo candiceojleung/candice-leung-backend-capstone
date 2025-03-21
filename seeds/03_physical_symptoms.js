@@ -5,7 +5,7 @@ export async function seed(knex) {
     "cramps",
     "fatigue",
     "acne",
-    "bloated",
+    "bloating",
     "headache",
     "nausea",
     "upset stomach",
