@@ -46,4 +46,4 @@ export {
     getAllArticles,
     getArticleById,
     getArticlesByCategory,
-}
+};

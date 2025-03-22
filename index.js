@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import periodLogRoutes from './routes/periodLogRoutes.js';
+import articleRoutes from './routes/articleRoutes.js';
 
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(express.json());
 // Basic Route
 app.use('/api/log', periodLogRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/articles', articleRoutes);
 
 // Server Listening
 const PORT = process.env.PORT || 8080;
