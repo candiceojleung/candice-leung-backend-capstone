@@ -29,7 +29,7 @@ export async function seed(knex) {
       content:
         "Explore the reasons behind cramps without a period and when to seek medical advice.",
       category: "Menstrual Health",
-      link: "https://www.webmd.com/women/why-do-i-have-cramps-but-no-period",
+      link: "https://www.webmd.com/women/cramps-but-no-period",
     },
     {
       title: "Trans-Inclusive Reproductive Health Care",
@@ -50,21 +50,21 @@ export async function seed(knex) {
       content:
         "Learn about the fertility awareness method and how it can help with family planning.",
       category: "Fertility & Family Planning",
-      link: "https://www.optionsforsexualhealth.org/birth-control-pregnancy/birth-control-options/natural-birth-control/fertility-awareness-methods-fam/",
+      link: "https://www.plannedparenthood.org/learn/birth-control/fertility-awareness",
     },
     {
-      title: "Traditional Postpartum Practices and Rituals",
+      title: "Postnatal rituals from around the world",
       content:
         "Discover traditional postpartum practices from around the world.",
       category: "Pregnancy & Postpartum",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6422835/",
+      link: "https://www.themindfulbirthgroup.com/parents/blog/postnatal-rituals-from-around-the-world/",
     },
     {
       title: "Consequences of maternal postpartum depression",
       content:
         "Understand the impact of postpartum depression on mothers and their families.",
       category: "Pregnancy & Postpartum",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6492376/",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6492376/",
     },
     {
       title:
@@ -72,21 +72,14 @@ export async function seed(knex) {
       content:
         "A detailed look at ectopic pregnancy, its diagnosis, management options, and recent innovations.",
       category: "Pregnancy & Postpartum",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7661839/",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10071153/",
     },
     {
       title: "Essential Vitamins for Women",
       content:
         "A guide to the essential vitamins women need at different stages of life to maintain optimal health.",
       category: "Nutrition & Wellness",
-      link: "https://www.webmd.com/women/guide/essential-vitamins-for-women",
-    },
-    {
-      title: "Healthy Eating for Weight Loss",
-      content:
-        "Learn how healthy eating habits can support weight loss while maintaining energy levels.",
-      category: "Nutrition & Wellness",
-      link: "https://www.webmd.com/diet/features/healthy-eating-for-weight-loss",
+      link: "https://www.webmd.com/women/essential-vitamins-for-women-at-every-age",
     },
     {
       title:
@@ -94,7 +87,7 @@ export async function seed(knex) {
       content:
         "Explore the connection between eating behaviors and pelvic floor disorders.",
       category: "Nutrition & Wellness",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7299638/",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11632885/",
     },
     {
       title: "Estrogen and Emotions",
@@ -108,21 +101,21 @@ export async function seed(knex) {
       content:
         "Practical advice for managing stress for women in their 50s and beyond.",
       category: "Mental Health & Stress",
-      link: "https://www.webmd.com/women/features/stress-women-over-50",
+      link: "https://www.webmd.com/women/women-over-50-tips-to-reduce-stress",
     },
     {
       title: "How to Beat Insomnia",
       content:
         "Strategies for improving sleep quality and overcoming insomnia.",
       category: "Mental Health & Stress",
-      link: "https://www.webmd.com/women/features/how-to-beat-insomnia",
+      link: "https://www.mayoclinic.org/diseases-conditions/insomnia/diagnosis-treatment/drc-20355173",
     },
     {
       title: "Keeping Fit After 50",
       content:
         "Tips and exercises for maintaining fitness and health after age 50.",
       category: "Nutrition & Wellness",
-      link: "https://www.webmd.com/healthy-aging/features/keeping-fit-after-50",
+      link: "https://www.webmd.com/healthy-aging/ss/slideshow-live-well-over-50",
     },
     {
       title:
@@ -158,28 +151,28 @@ export async function seed(knex) {
       content:
         "Explore how rheumatoid arthritis affects women differently than men.",
       category: "Chronic Health Conditions",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7299638/",
+      link: "https://www.researchgate.net/publication/23653427_Rheumatoid_Arthritis_A_Female_Challenge",
     },
     {
       title: "Missing and dismissing the impact of periods",
       content:
         "Understanding the societal and personal impacts of menstruation.",
       category: "Menstrual Health",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7299638/",
+      link: "https://www.researchgate.net/publication/386871855_Missing_and_dismissing_the_impact_of_periods_Outcomes_of_focus_groups_of_teens_with_period_concerns",
     },
     {
       title: "Centering disability visibility in reproductive health care",
       content:
         "Addressing the importance of inclusive reproductive health care for individuals with disabilities.",
       category: "Inclusive Health Care",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7299638/",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10486212/",
     },
     {
       title: "Health Checklist for Women Over 40",
       content:
         "Essential health checks and screenings for women aged 40 and above.",
       category: "Health Checklists & Advice",
-      link: "https://www.webmd.com/women/features/health-checklist-women-40-plus",
+      link: "https://www.webmd.com/women/health-checklist-for-women-over-40",
     },
     {
       title: "Why Am I So Tired?",
@@ -189,26 +182,12 @@ export async function seed(knex) {
       link: "https://www.webmd.com/women/guide/why-so-tired-10-causes-fatigue",
     },
     {
-      title: "Leveraging artificial intelligence for inclusive maternity care",
-      content:
-        "Discover how AI is being used to improve and personalize maternity care.",
-      category: "Innovation & Technology",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7299638/",
-    },
-    {
-      title: "Factors associated with undernutrition among pregnant women",
-      content:
-        "Examining the social and cultural factors that contribute to undernutrition in pregnant women.",
-      category: "Social & Cultural Aspects",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7299638/",
-    },
-    {
       title:
         "Identifying key barriers to cervical cancer screening in young women",
       content:
         "Understanding and addressing obstacles to cervical cancer screening among younger women.",
       category: "Social & Cultural Aspects",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7299638/",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11907612/",
     },
     {
       title:
@@ -237,7 +216,7 @@ export async function seed(knex) {
       content:
         " Learn about the prevalence of thyroid disorders in women, how they can affect fertility and pregnancy",
       category: "Hormones & Endocrine Health",
-      link: "https://www.thyroid.org/thyroid-disease-women/",
+      link: "https://www.hopkinsmedicine.org/health/conditions-and-diseases/thyroid-disorders-in-women"
     },
   ];
 
