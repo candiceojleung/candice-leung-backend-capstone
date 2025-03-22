@@ -21,7 +21,7 @@ export async function seed(knex) {
         "The Imperative for Transgender and Gender Nonbinary Inclusion in Reproductive Health",
       content:
         "Read about ways to create inclusive, accurate, and respectful care environments, to ensure higher quality health care for people of all genders.",
-      category: "Inclusive Reproductive Health Care",
+      category: "Inclusive Health Care",
       link: "https://journals.lww.com/greenjournal/fulltext/2020/05000/the_imperative_for_transgender_and_gender.10.aspx",
     },
     {
@@ -35,7 +35,7 @@ export async function seed(knex) {
       title: "Trans-Inclusive Reproductive Health Care",
       content:
         "Learn about challenges faced by trans individuals in accessing reproductive health care and highlights efforts to create gender-affirming, inclusive practices.",
-      category: "Inclusive Reproductive Health Care",
+      category: "Inclusive Health Care",
       link: "https://www.med.ubc.ca/news/trans-inclusive-reproductive-health-care/",
     },
     {
