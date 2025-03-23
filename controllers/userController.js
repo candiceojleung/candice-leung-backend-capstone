@@ -19,7 +19,7 @@ const createUser = async (req, res, next) => {
 
 const getUser = async (req, res, next) => {
   try {
-    const user = await knex("users").where({ id: req.params.id }).first();
+    const user = await knex("users").where({ id: req.params.userId }).first();
 
     user ? res.json(user) : res.status(404).json({ error: "User not found" });
   } catch (error) {
@@ -38,7 +38,7 @@ const updateUser = async (req, res, next) => {
       });
 
     updatedCount
-      ? res.json(await knex("users").where({ id: req.params.id }).first())
+      ? res.json(await knex("users").where({ id: req.params.userId }).first())
       : res.status(404).json({ error: "User not found" });
   } catch (error) {
     next(error);
@@ -47,7 +47,7 @@ const updateUser = async (req, res, next) => {
 
 const deleteUser = async (req, res, next) => {
   try {
-    const deletedCount = await knex("users").where({ id: req.params.id }).del();
+    const deletedCount = await knex("users").where({ id: req.params.userId }).del();
 
     deletedCount
       ? res.status(204).end()
